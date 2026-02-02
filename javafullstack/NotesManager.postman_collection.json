@@ -1,0 +1,89 @@
+{
+  "info": {
+    "name": "Notes Manager API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "CRUD operations for Notes Manager backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My First Note\",\n  \"content\": \"This is the content of the note\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "notes"]
+        }
+      }
+    },
+    {
+      "name": "Get All Notes",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "notes"]
+        }
+      }
+    },
+    {
+      "name": "Get Note By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/notes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "notes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Note",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Note\",\n  \"content\": \"This is the updated content\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/notes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "notes", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Note",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/notes/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "notes", "1"]
+        }
+      }
+    }
+  ]
+}
